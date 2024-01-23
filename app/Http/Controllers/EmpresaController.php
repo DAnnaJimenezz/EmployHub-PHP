@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Empresa;
+use App\Models\Tipo_usuario;
+use Illuminate\Http\Request;
+
+class EmpresaController extends Controller
+{
+    public function Empresa (){
+
+
+        $empresas = Empresa::all();
+        return view("empresa.index", ["empresas"=>$empresas]);
+    }
+    
+    public function Create(){
+
+        $tipos_usuarios = Tipo_usuario::all();
+        return view('empresa.create',['tipos_usuarios'=> $tipos_usuarios]);
+    }
+
+    public function Store(Request $request){;
+
+        $empresa = new Empresa($request->validated());
+        $empresa->save();
+        return redirect('empresa')->with('success', 'Compañia creada exitosamente');
+
+    }
+
+    public function Edit (Empresa $empresa){
+        return view('empresa.edit', compact('empresa'));
+    }
+
+
+    public function Update(Request $request, Empresa $empresa){
+        
+        $empresa->update($request->all()); 
+        return redirect()->route('empresa');
+    }
+
+    public function Show(Empresa $empresa){
+        return view ('empresa.show', compact('empresa'));
+    }
+
+    public function Destroy (Request $request, Empresa $empresa){ 
+        $empresa->delete();
+        return redirect()->route('empresa');
+    }
+
+    public function header()
+    {
+        return view('layouts.headerCompany');
+    }
+}
