@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_empresa', 25);
             $table->string('representante_legal', 50);
-            $table->enum('tipo_empresa', ['NO_DEFINIDO', 'LIMITADA', 'ANÓNIMA', 'ORDEN', 'SOCIEDAD_ASOCIATIVA', 'EMPRESARIO_INDIVIDUAL', 'OTRA', 'PERSONA_NATURAL', 'SOCIEDAD_COLECTIVA', 'SOCIEDAD_POR_ACCIONES_SIMPLIFICADA', 'SOCIEDAD_DE_RESPONSABILIDAD_LIMITADA', 'SOCIEDAD_EN_COMANDITA_SIMPLE', 'SOCIEDAD_EN_COMANDITA_POR_ACCIONES', 'EMPRESA_RURAL_SENA_EMPRENDE_RURAL']);
+            $table->enum('tipo_empresa', ['NO_DEFINIDO', 'LIMITADA', 'ANÓNIMA', 'DOMINIO', 'SOCIEDAD_ASOCIATIVA', 'EMPRESARIO_INDIVIDUAL', 'OTRA', 'PERSONA_NATURAL', 'SOCIEDAD_COLECTIVA', 'SOCIEDAD_POR_ACCIONES_SIMPLIFICADA', 'SOCIEDAD_DE_RESPONSABILIDAD_LIMITADA', 'SOCIEDAD_EN_COMANDITA_POR_ACCIONES', 'EMPRESA_RURAL_SENA_EMPRENDE_RURAL']);
             $table->string('NIT', 50)->unique();
             $table->string('numero_trabajadores', 50);
             $table->string('correo_representante_legal', 80);
