@@ -2,40 +2,40 @@
 @section('content')
 
 
-<div  class="container1">
+<div class="contenedor1">
     <link rel="stylesheet" href="{{ asset('/css/index.css') }}">
-    <a href="{{ route('create.recruiter') }}" class="boton1">Create New Recruiter</a>
+    <a href="{{ route('create.reclutador') }}" class="boton1">Crear Nuevo Reclutador</a>
     <ul>
-        @forelse ($recruiters as $recruiter)
+        @forelse ($reclutadores as $reclutador)
         <table>
             <tr>
                 <th>ID</th>
-                <th>Number Document</th>
-                <th>Document Type</th>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Email</th>
+                <th>Número de Documento</th>
+                <th>Tipo de Documento</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Correo Electrónico</th>
             </tr>
             <tr>
-                <td><a>{{ $recruiter->id }}</a></td>
-                <td><a>{{ $recruiter->number_document }}</a></td>
-                <td><a>{{ $recruiter->document_type}}</a></td>
-                <td><a>{{ $recruiter->name }}</a></td>
-                <td><a>{{ $recruiter->phone }}</a></td>
-                <td><a>{{ $recruiter->email }}</a></td>
+                <td><a>{{ $reclutador->id }}</a></td>
+                <td><a>{{ $reclutador->numero_documento }}</a></td>
+                <td><a>{{ $reclutador->tipo_documento}}</a></td>
+                <td><a>{{ $reclutador->nombre }}</a></td>
+                <td><a>{{ $reclutador->telefono }}</a></td>
+                <td><a>{{ $reclutador->correo_electronico }}</a></td>
             </tr>
         </table>
             <li>
-                <a href="{{ route('show.recruiter', $recruiter->id) }}">{{ $recruiter->id }}</a> |
-                <a href="{{ route('edit.recruiter', $recruiter->id) }}" class="boton1">EDIT</a> |
-                <form method="POST" action="{{ route('destroy.recruiter', ['recruiter'=>$recruiter->id]) }}"> 
+                <a href="{{ route('show.reclutador', $reclutador->id) }}">{{ $reclutador->id }}</a> |
+                <a href="{{ route('edit.reclutador', $reclutador->id) }}" class="boton1">EDITAR</a> |
+                <form method="POST" action="{{ route('destroy.reclutador', ['reclutador'=>$reclutador->id]) }}"> 
                     @csrf
                     @method('DELETE')
                     <input type="submit" value='DELETE' class="boton1">
                 </form>
             </li>
         @empty
-            <p>No data.</p>
+            <p>No hay datos.</p>
         @endforelse
     </ul>
 </div>

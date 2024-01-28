@@ -2,10 +2,10 @@
 
 @section('content')
 
-<a href="{{ route('index.recruiter')}}">Back</a>
-<h1>{{ $recruiter->number_document }}</h1>
-<h1>{{ $recruiter->document_type }}</h1>
-<h1>{{ $recruiter->name }}</h1>
-<h1>{{ $recruiter->phone }}</h1>
-<h1>{{ $recruiter->email }}</h1>
+<a href="{{ route('index.reclutador')}}">Volver</a>
+<h1>{{ $reclutador->numero_documento }}</h1>
+<h1>{{ $reclutador->tipo_documento }}</h1>
+<h1>{{ $reclutador->nombre }}</h1>
+<h1>{{ $reclutador->telefono }}</h1>
+<h1>{{ $reclutador->correo_electronico }}</h1>
 @endsection

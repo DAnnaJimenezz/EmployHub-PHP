@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('localidades', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_locacion', 500);
+            $table->string('nombre_localidad', 500);
             $table->timestamps();
         });
     }

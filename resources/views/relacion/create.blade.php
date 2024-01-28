@@ -2,23 +2,23 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('/css/Relations/createRelation.css') }}">
-<a href="{{ route ('relation') }}"> Back</a>
+<a href="{{ route ('relation') }}"> Regresar</a>
 
 <section class="create">
-    <h1 class="title">Create Your <span>Relation</span></h1>
+    <h1 class="title">Cree su <span>Relación</span></h1>
     <form action="{{ route('store.relation') }}" method="POST">
         @csrf
 
-        <label>Write the name of the related occupation :</label>
-        <input name="name_related_occupation" type="text" required></><br><br>
+        <label>Escriba el nombre de la ocupación relacionada:</label>
+        <input name="nombre_relacion_ocupacion" type="text" required></><br><br>
 
-        <label for="correo">Write Id Occupation</label>
-        <input type="number" id=correo name="id_occupation" class="textarea1" required><br><br>
+        <label for="id_ocupaciones">Escriba el ID de la ocupación:</label>
+        <input type="number" id="id_ocupaciones" name="id_ocupaciones" class="textarea1" required><br><br>
 
-        <label for="correo">Write Occupation_name</label>
-        <input type="number" id=correo name="occupation_name" class="textarea1" required><br><br>
+        <label for="nombre_ocupacion">Escriba el nombre de la ocupación:</label>
+        <input type="text" id="nombre_ocupacion" name="nombre_ocupacion" class="textarea1" required><br><br>
 
-        <center><button type="submit" class="create-application-button">Create</button></center>
+        <center><button type="submit" class="create-application-button">Crear</button></center>
     </form>
-    @endsection
 </section>
+@endsection

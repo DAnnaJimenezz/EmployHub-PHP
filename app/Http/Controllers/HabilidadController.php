@@ -18,10 +18,10 @@ class HabilidadController extends Controller
         return view('habilidad.create');
     }
 
-    public function Store(Habilidad $request)
+    public function Store(Request $request)
     {
-        $ability = new Habilidad($request->validated());
-        $ability->save();
+        $habilidad = new Habilidad($request->validated());
+        $habilidad->save();
         return redirect('habilidad')->with('success', 'Habilidad creada exitosamente');
     }
 
@@ -30,7 +30,7 @@ class HabilidadController extends Controller
         return view('habilidad.edit', compact('habilidad'));
     }
 
-    public function Update(Habilidad $request, Habilidad $habilidad)
+    public function Update(Request $request, Habilidad $habilidad)
     {
         $habilidad->update($request->validated());
         return redirect()->route('habilidad');

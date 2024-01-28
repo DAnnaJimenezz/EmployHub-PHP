@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeEmail;
 use App\Models\Tipo_usuario;
 use App\Models\Usuario;
 use Illuminate\Http\Request;
@@ -25,10 +26,10 @@ class UsuarioController extends Controller
     public function Store(Request $request){
 
         $usuario = new Usuario();
-        $usuario->username = $request->input('username');
-        $usuario->email = $request->input('email');
-        $usuario->id_user_types = $request->input('id_user_types');
-        $usuario->password = Hash::make($request->password);
+        $usuario->nombre_usuario = $request->input('nombre_usuario');
+        $usuario->correo_electronico = $request->input('correo_electronico');
+        $usuario->id_tipos_usuario = $request->input('id_tipos_usuario');
+        $usuario->contraseña = Hash::make($request->contraseña);
         $usuario->save();
 
         Mail::to($request['email'])->send(new WelcomeEmail($usuario));

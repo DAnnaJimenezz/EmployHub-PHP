@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_usuario');
-            $table->foreignId('id_tipos_usuario')->constrained('tipo_usuarios')->onDelete('cascade');
+            $table->foreignId('id_tipo_usuario')->constrained('tipo_usuarios')->onDelete('cascade');
             $table->string('correo_electronico');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('contrasena');
+            $table->string('contraseña');
             $table->rememberToken();
             $table->timestamps();
         });

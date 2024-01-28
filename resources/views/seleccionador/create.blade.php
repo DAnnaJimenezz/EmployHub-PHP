@@ -2,42 +2,42 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('/css/Selectors/createSelector.css') }}">
-<a href="{{ route ('selector') }}"> Back</a>
+<a href="{{ route ('seleccionador') }}"> Volver</a>
 
 <section class="create">
-    <h1 class="title">Create Your <span>Selector</span></h1>
-    <form action="{{ route('store.selector') }}" method="POST">
+    <h1 class="title">Crea tu <span>Selector</span></h1>
+    <form action="{{ route('store.seleccionador') }}" method="POST">
         @csrf
 
-        <label>Write your document number :</label>
-        <input name="number_document_selector" type="number" required><br><br>
+        <label>Escribe tu número de documento:</label>
+        <input name="numero_documento_selector" type="number" required><br><br>
 
-        <label for="tipo_selector">Document Type</label>
-        <select id="tipo_selector" name="document_type_selector">
+        <label for="tipo_selector">Tipo de Documento</label>
+        <select id="tipo_selector" name="tipo_documento_selector">
             <option value="TI">TI</option>
             <option value="CC">CC</option>
             <option value="NIT">NIT</option>
-            <option value="PASSPORT">PASSPORT</option>
-            <option value="CC_FOREIGNER">CC_FOREIGNER</option>
+            <option value="PASAPORTE">PASAPORTE</option>
+            <option value="CC_EXTRANJERO">CC_EXTRANJERO</option>
         </select>
 
-        <label>Write your name:</label>
-        <input type="text"  name="name_selector" required><br><br>
+        <label>Escribe tu nombre:</label>
+        <input type="text"  name="nombre_selector" required><br><br>
 
-        <label>Write your phone :</label>
-        <input type="number" name="phone_selector" required><br><br>
+        <label>Escribe tu teléfono:</label>
+        <input type="number" name="telefono_selector" required><br><br>
 
-        <label>Write your email:</label>
-        <input type="text" name="email_selector" required><br><br>
+        <label>Escribe tu correo electrónico:</label>
+        <input type="text" name="correo_electronico_selector" required><br><br>
 
-        <label for="" class="form-label">User Type Id</label>
-        <select class="" name="id_user_types" id="id_user_types">
+        <label for="" class="form-label">ID del Tipo de Usuario</label>
+        <select class="" name="id_tipo_usuario" id="id_tipo_usuario">
             @foreach ($user_type as $user_type)
             <option value="{{$user_type->id}}">{{$user_type->user_type_name }}</option>    
             @endforeach
         </select>
 
-        <center><button type="submit" class="create-application-button">Create</button></center>
+        <center><button type="submit" class="create-application-button">Crear</button></center>
     </form>
     @endsection
 </section>

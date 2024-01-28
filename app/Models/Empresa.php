@@ -27,4 +27,9 @@ class Empresa extends Model
         'id_cargo',
         'id_tipo_usuario',
     ];
+
+    public function userType()
+    {
+        return $this->belongsTo(Tipo_usuario::class, 'id_tipo_usuario');
+    }
 }

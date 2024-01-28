@@ -2,18 +2,18 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('/css/Relations/createRelation.css') }}">
-<a href="{{ route ('relation') }}"> Back</a>
+<a href="{{ route ('relation') }}"> Regresar</a>
 
 <section class="create">
-    <h1 class="title">Edit Your <span>Relation</span></h1>
-    <form action="{{ route('update.relation', $recruiter->id) }}" method="POST">
+    <h1 class="title">Edita tu <span>Relación</span></h1>
+    <form action="{{ route('update.relation', $relation->id) }}" method="POST">
         @method('PUT')
         @csrf
 
-        <label>Write the name of the related occupation :</label>
-        <input name="name_related_occupation" type="text" required value="{{ $relation-> name_related_occupation }}"><input></><br><br>
+        <label>Escribe el nombre de la ocupación relacionada:</label>
+        <input name="name_related_occupation" type="text" required value="{{ $relation->name_related_occupation }}"><br><br>
 
-        <center><button type="submit" class="create-application-button">Create</button></center>
+        <center><button type="submit" class="create-application-button">Actualizar</button></center>
     </form>
-    @endsection
 </section>
+@endsection
