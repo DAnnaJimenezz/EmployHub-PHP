@@ -24,21 +24,21 @@
 
             <div id="barra-superior">
                 @if (auth()->user())
-                <p class="mensaje-bienvenida">Bienvenid@ {{ auth()->user()->username }}</p>
+                <p class="mensaje-bienvenida">Bienvenid@ {{ auth()->user()->nombre_usuario }}</p>
                 <ul class="menu-usuario">
-                    @if (session('id_user_types') == 1)
+                    @if (session('id_tipo_usuario') == 1)
                         <li><a href="{{ route('headerAdmin')}}">Tipo de Usuario Admin</a></li>
                         
-                        @elseif (auth()->user()->id_user_types == 2)
+                        @elseif (auth()->user()->id_tipo_usuario == 2)
                         <li><a href="{{ route('headerSeleccionador')}}">Tipo de Usuario Seleccionador</a></li>
 
-                        @elseif (auth()->user()->id_user_types == 3)
+                        @elseif (auth()->user()->id_tipo_usuario == 3)
                         <li><a href="{{ route('headerReclutador')}}">Tipo de Usuario Reclutador</a></li>
 
-                        @elseif (auth()->user()->id_user_types == 4)
+                        @elseif (auth()->user()->id_tipo_usuario == 4)
                         <li><a href= "{{ route('headerCandidato')}}">Tipo de Usuario Candidato</a></li>
 
-                        @elseif (auth()->user()->id_user_types == 5)
+                        @elseif (auth()->user()->id_tipo_usuario == 5)
                         <li><a href="{{ route('headerEmpresa')}}" >Tipo de Usuario Empresa</a><li>
                             
                         @endif

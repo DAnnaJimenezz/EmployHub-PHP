@@ -54,6 +54,6 @@ class SeleccionadorController extends Controller
 
     public function header()
     {
-        return view('layouts.headerSelector');
+        return view('layouts.headerSeleccionador');
     }
 }

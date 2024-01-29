@@ -46,6 +46,6 @@ class CandidatoController extends Controller
 
     public function header()
     {
-        return view('layouts.headerCandidate');
+        return view('layouts.headerCandidato');
     }
 }

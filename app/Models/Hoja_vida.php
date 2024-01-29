@@ -9,6 +9,8 @@ class Hoja_vida extends Model
 {
     use HasFactory;
 
+    protected $table = 'hoja_vidas';
+
     protected $fillable = [
         'descripcion_personal',
         'idiomas',

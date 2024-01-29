@@ -22,7 +22,7 @@ class InstructorController extends Controller
         $instructor = new Instructor($request->validated());
         $instructor->save();
 
-        return redirect('instructor')->with('success', 'Vacante creado exitosamente');
+        return redirect('instructor')->with('success', 'Instructor creado exitosamente');
     }
 
     public function Edit (Instructor $instructor){

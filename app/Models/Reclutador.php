@@ -9,12 +9,14 @@ class Reclutador extends Model
 {
     use HasFactory;
 
+    protected $table = 'reclutadores';
+
     protected $fillable = [
         'numero_documento',
         'tipo_documento',
         'nombre',
         'telefono',
         'correo_electronico',
-        'id_tipos_usuario',
+        'id_tipo_usuario',
     ];
 }

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class TipoUsuarioTableSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Run the database seeds.,
      *
      * @return void
      */

@@ -9,6 +9,8 @@ class Seleccionador extends Model
 {
     use HasFactory;
 
+    protected $table = 'seleccionadores';
+
     protected $fillable = [
         'numero_documento_selector',
         'tipo_documento_selector',

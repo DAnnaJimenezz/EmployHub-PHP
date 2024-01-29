@@ -20,7 +20,7 @@ class UsuarioController extends Controller
     public function Create(){
 
         $tipo_usuarios = Tipo_usuario::all();
-        return view('auth/register',['tipo_usuarios'=> $tipo_usuarios]);
+        return view('auth/register',['tipo_usuario'=> $tipo_usuarios]);
     }
 
     public function Store(Request $request){
@@ -28,16 +28,15 @@ class UsuarioController extends Controller
         $usuario = new Usuario();
         $usuario->nombre_usuario = $request->input('nombre_usuario');
         $usuario->correo_electronico = $request->input('correo_electronico');
-        $usuario->id_tipos_usuario = $request->input('id_tipos_usuario');
+        $usuario->id_tipo_usuario = $request->input('id_tipo_usuario');
         $usuario->contraseña = Hash::make($request->contraseña);
         $usuario->save();
 
-        Mail::to($request['email'])->send(new WelcomeEmail($usuario));
+        Mail::to($request['correo_electronico'])->send(new WelcomeEmail($usuario));
 
         return view('auth.welcome');
 
         return redirect()->back()->with('mensaje',  'Usuario creado correctamente...');
-
     }
 
     public function Edit (Usuario $usuario){

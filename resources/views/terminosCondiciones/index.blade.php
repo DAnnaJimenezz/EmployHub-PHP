@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<link rel="stylesheet" href="../css/Terms_Conditions/termsConditions.css">
+<link rel="stylesheet" href="../css/Terminos_Condiciones/termsConditions.css">
 <section class="contenedor">
     <img class="marca" src = "../Img/Logo_EmplyHub.png" alt ="Marca Imagen"/>
     <h1>Terminos y Condiciones</h1>

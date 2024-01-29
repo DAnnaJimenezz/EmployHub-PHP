@@ -51,6 +51,6 @@ class EmpresaController extends Controller
 
     public function header()
     {
-        return view('layouts.headerCompany');
+        return view('layouts.headerEmpresa');
     }
 }

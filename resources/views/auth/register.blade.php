@@ -10,41 +10,41 @@
         <content class="SIGNUP">
             <link rel="stylesheet" href="{{ asset('/css/Register/register.css') }}">
             <head class="user">
-                <h1>SIGN IN</h1>
+                <h1>REGISTRARSE</h1>
                 <img src="{{ asset('Img/LOGIN.png') }}" alt="user" width="300px" height="300px" />
             </head>
-                <form action="{{ route('user.store') }}" method="POST">
+                <form action="{{ route('usuario.store') }}" method="POST">
                     @csrf
-                    <article class="username">
-                        <label for="username">
+                    <article class="nombre_usuario">
+                        <label for="nombre_usuario">
                             <img src="{{ asset('Img/USERNAME.png') }}" alt="Imagen" width="40px" height="40px" />
-                            <input type="text" name="username" placeholder="| username" required value="{{ old('username') }}"/>
+                            <input type="text" name="nombre_usuario" placeholder="| Nombre Usuario" required value="{{ old('nombre_usuario') }}"/>
                         </label>
                     </article>
                     <br>
-                    <article class="user_type">
-                        <img src="{{ asset('Img/user-type.png') }}" alt="Imagen" width="30px" height="30px" />| User Type
-                        <label for="exampleInputEmail" class="user_type"></label>
-                        <select class="user_type" name="id_user_types" id="">
-                        @foreach ($user_types as $user_type)
-                        <option value="{{$user_type->id}}">{{$user_type->user_type_name}}</option>    
+                    <article class="id_tipo_usuario">
+                        <img src="{{ asset('Img/user-type.png') }}" alt="Imagen" width="30px" height="30px" />| Tipo Usuario
+                        <label for="exampleInputEmail" class="id_tipo_usuario"></label>
+                        <select class="tipo_usuario" name="id_tipo_usuario" id="">
+                        @foreach ($tipo_usuario as $tipo_usuarios)
+                        <option value="{{$tipo_usuarios->id}}">{{$tipo_usuarios->nombre_tipo_usuario}}</option>    
                         @endforeach
                         </select>
                     </article> 
                     <br>
                     
-                    <article class="email">
-                        <label for="email">
+                    <article class="correo_electronico">
+                        <label for="correo_electronico">
                             <img src="{{ asset('Img/email-icon.png') }}" alt="Imagen" width="30px" height="30px" />
-                            <input type="email" name="email" placeholder="| email" required value="{{ old('email') }}">
+                            <input type="email" name="correo_electronico" placeholder="| Correo Electronico" required value="{{ old('correo_electronico') }}">
                         </label>
                     </article>
                     <br>
 
-                    <article class="password">
-                        <label for="password">
+                    <article class="contraseña">
+                        <label for="contraseña">
                             <img src="{{ asset('Img/PASSWORD.png') }}" alt="Imagen" width="40px" height="40px" />
-                            <input type="password" name="password" placeholder="| password" required value="{{ old('password') }}"/>
+                            <input type="password" name="contraseña" placeholder="| Contraseña" required value="{{ old('contraseña') }}"/>
                         </label>
                     </article>
 

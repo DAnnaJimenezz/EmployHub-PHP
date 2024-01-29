@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Spatie\Permission\Traits\HasRoles;
 
 class Usuario extends Model
 {
@@ -18,14 +17,14 @@ class Usuario extends Model
 
     protected $fillable = [
         'nombre_usuario',
-        'id_tipos_usuario',
+        'id_tipo_usuario',
         'correo_electronico',
         'contrasena',
     ];
 
-    public function tipo_usuario()
+    public function tipoUsuario()
     {
-        return $this->belongsTo(Tipo_usuario::class, 'id_tipos_usuario', 'id');
+        return $this->belongsTo(Tipo_usuario::class, 'id_tipo_usuario', 'id');
     }
 
     protected $casts = [

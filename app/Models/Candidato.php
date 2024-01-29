@@ -9,6 +9,8 @@ class Candidato extends Model
 {
     use HasFactory;
 
+    protected $table = 'candidatos';
+
     protected $fillable = [
         'numero_documento',
         'tipo_documento',

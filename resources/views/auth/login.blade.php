@@ -14,22 +14,22 @@
                     <p style="color:red;">{{ session('message') }}</p>
                     @endif
                     <br />
-                    <article class="username">
-                        <label for="username">
+                    <article class="nombre_usuario">
+                        <label for="nombre_usuario">
                             <img src="{{ asset('img/USERNAME.png') }}" alt="Imagen" width="40px" height="40px" />
-                            <input type="text" name="username" placeholder="| username" required value="{{ old('username') }}" />
-                            @error('username')
+                            <input type="text" name="nombre_usuario" placeholder="| Nombre Usuario" required value="{{ old('nombre_usuario') }}" />
+                            @error('nombre_usuario')
                                 <h5>{{ $message }}</h5>
                             @enderror
                         </label>
                     </article>
                     <br />
 
-                    <article class="password">
-                        <label for="password">
+                    <article class="contraseña">
+                        <label for="contraseña">
                             <img src="{{ asset('img/PASSWORD.png') }}" alt="Imagen" width="40px" height="40px" />
-                            <input type="password" name="password" placeholder="| password" required value="{{ old('password') }}" />
-                            @error('password')
+                            <input type="password" name="contraseña" placeholder="| Contraseña" required value="{{ old('contraseña') }}" />
+                            @error('contraseña')
                                 <h5>{{ $message }}</h5>
                             @enderror
                         </label>

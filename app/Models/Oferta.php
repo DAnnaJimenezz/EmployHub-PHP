@@ -26,6 +26,6 @@ class Oferta extends Model
 
     public function tipoContrato()
     {
-        return $this->belongsTo(Tipo_contrato::class, 'id_tipos_contrato');
+        return $this->belongsTo(Tipo_contrato::class, 'id_tipo_contrato');
     }
 }

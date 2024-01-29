@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<link rel="stylesheet" href="{{ asset('../css/About_Us/aboutUS.css') }}">
+<link rel="stylesheet" href="{{ asset('../css/Sobre_Nosotros/aboutUS.css') }}">
 <section class="sobre_Nosotros">
     <section class="titulo">
         <h1>Conocenos un<span> poco más...</span></h1>

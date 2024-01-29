@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Habilidad extends Model
+class Ocupacion extends Model
 {
     use HasFactory;
 
-    protected $table = 'habilidades'; 
+    protected $table = 'ocupaciones'; 
 
     protected $fillable = [
-        'nombre_habilidad',
-        'descripcion_habilidad',
-        'id_ocupaciones',
-        'nombre_ocupacion'
+        'nombre_ocupacion',
+        'descripcion_ocupacion',
+        'id_cargo'
     ];
 }

@@ -216,6 +216,6 @@ Route::post('login', [LoginController::class, 'store'])->name('login.auth');
 
 Route::get('home', [HomeController::class, 'index'])->name('home.index');
 
-Route::resource('user', UsuarioController::class);
+Route::resource('usuario', UsuarioController::class);
 Route::get('register', [UsuarioController::class, 'create'])->name('register');
 Route::post('register', [UsuarioController::class, 'store']);

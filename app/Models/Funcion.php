@@ -9,6 +9,8 @@ class Funcion extends Model
 {
     use HasFactory;
 
+    protected $table = 'funciones'; 
+
     protected $fillable = [
         'descripcion_funcion',
         'id_ocupaciones',

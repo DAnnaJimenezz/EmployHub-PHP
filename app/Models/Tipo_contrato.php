@@ -9,6 +9,8 @@ class Tipo_contrato extends Model
 {
     use HasFactory;
 
+    protected $table = 'tipo_contratos'; 
+
     protected $fillable = [
         'nombre_contrato',
         'descripcion',

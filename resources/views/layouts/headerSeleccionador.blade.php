@@ -4,11 +4,11 @@
         <li class="contenedor-selector">
             <a href="#">Selector</a>
             <ul class="sub-Menu-selector">
-                <li><a href="">Consult Selection Process</a></li>
-                <li><a href="">Consult list of selected</a></li>
-                <li><a href="">Quote candidates</a></li>
-                <li><a href="">Record result of the selection process</a></li>
-                <li><a href="">Change Status</a></li>
+                <li><a href="">Consultar proceso de seleccion</a></li>
+                <li><a href="">Consultar lista de seleccionados</a></li>
+                <li><a href="">Citar Candidat@s</a></li>
+                <li><a href="">Registar resultado del proceso de seleccion</a></li>
+                <li><a href="">Cambiar estado</a></li>
             </ul>
         </li>
     </ul>

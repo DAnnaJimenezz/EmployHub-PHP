@@ -9,6 +9,8 @@ class Relacion extends Model
 {
     use HasFactory;
 
+    protected $table = 'relaciones'; 
+
     protected $fillable = [
         'nombre_relacionado_ocupacion',
         'id_ocupaciones',

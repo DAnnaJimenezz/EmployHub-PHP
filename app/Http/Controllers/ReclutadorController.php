@@ -51,6 +51,6 @@ class ReclutadorController extends Controller
 
     public function header()
     {
-        return view('layouts.headerRecruiter');
+        return view('layouts.headerReclutador');
     }
 }

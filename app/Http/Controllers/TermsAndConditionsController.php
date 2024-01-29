@@ -8,6 +8,6 @@ class TermsAndConditionsController extends Controller
 {
     public function mostrarTermsConditions()
     {
-        return view('termsConditions.index');
+        return view('terminosCondiciones.index');
     }
 }
