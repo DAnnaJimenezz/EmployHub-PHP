@@ -5,11 +5,11 @@
 <a href="{{ route('cargo') }}"> Volver</a>
 
 <section class="create">
-    <h1 class="title">Crear tu <span>Publicación</span></h1>
+    <h1 class="title">Crear tu <span>Cargo</span></h1>
     <form action="{{ route('store.cargo') }}" method="POST">
         @csrf
 
-        <label>Escribe el nombre de la publicación:</label>
+        <label>Escribe el nombre del cargo:</label>
         <textarea  type="text" name="nombre_cargo" rows="4" cols="50" required></textarea><br><br>
 
         <label>Escribe la dirección:</label>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\VacanteRequest;
 use App\Models\Vacante;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class VacanteController extends Controller
         return view('vacante.create');
     }
 
-    public function Store(Request $request){
+    public function Store(VacanteRequest $request){
 
         $vacante = new Vacante($request->validated());
         $vacante->save();
@@ -30,7 +31,7 @@ class VacanteController extends Controller
     }
 
 
-    public function Update(Request $request, Vacante $vacante){
+    public function Update(VacanteRequest $request, Vacante $vacante){
         
         $vacante->update($request->all()); 
         return redirect()->route('vacante');

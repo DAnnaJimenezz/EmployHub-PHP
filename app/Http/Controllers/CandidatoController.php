@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CandidatoRequest;
 use App\Models\Candidato;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class CandidatoController extends Controller
         return view('candidato.create');
     }
 
-    public function Store(Candidato $request){
+    public function Store(CandidatoRequest $request){
 
         $candidato = new Candidato($request->validated());
         $candidato->save();
@@ -29,7 +30,7 @@ class CandidatoController extends Controller
     }
 
 
-    public function Update(Request $request, Candidato $candidato){
+    public function Update(CandidatoRequest $request, Candidato $candidato){
         
         $candidato->update($request->all()); 
         return redirect()->route('candidato');

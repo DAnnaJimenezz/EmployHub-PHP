@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DenominacionRequest;
 use App\Models\Denominacion;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class DenominacionController extends Controller
         return view('denominacion.create');
     }
 
-    public function Store(Request $request){
+    public function Store(DenominacionRequest $request){
 
         $denominacion = new Denominacion($request->validated());
         $denominacion->save();
@@ -29,7 +30,7 @@ class DenominacionController extends Controller
     }
 
 
-    public function Update(Request $request, Denominacion $denominacion){
+    public function Update(DenominacionRequest $request, Denominacion $denominacion){
         
         $denominacion->update($request->all()); 
         return redirect()->route('denominacion');

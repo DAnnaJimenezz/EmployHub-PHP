@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmpresaRequest;
 use App\Models\Empresa;
 use App\Models\Tipo_usuario;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class EmpresaController extends Controller
         return view('empresa.create',['tipos_usuarios'=> $tipos_usuarios]);
     }
 
-    public function Store(Request $request){;
+    public function Store(EmpresaRequest $request){;
 
         $empresa = new Empresa($request->validated());
         $empresa->save();
@@ -34,7 +35,7 @@ class EmpresaController extends Controller
     }
 
 
-    public function Update(Request $request, Empresa $empresa){
+    public function Update(EmpresaRequest $request, Empresa $empresa){
         
         $empresa->update($request->all()); 
         return redirect()->route('empresa');

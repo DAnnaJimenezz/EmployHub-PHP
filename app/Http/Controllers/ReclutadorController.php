@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ReclutadorRequest;
 use App\Models\Reclutador;
 use App\Models\Tipo_usuario;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class ReclutadorController extends Controller
         return view('/reclutador/create',['tipo_usuario'=> $tipo_usuarios]);
     }
 
-    public function Store(Request $request){
+    public function Store(ReclutadorRequest $request){
 
         $reclutador = new Reclutador($request->validated());
         $reclutador->save();
@@ -34,7 +35,7 @@ class ReclutadorController extends Controller
     }
 
 
-    public function Update(Request $request, Reclutador $reclutador){
+    public function Update(ReclutadorRequest $request, Reclutador $reclutador){
         
         $reclutador->update($request->all()); 
         return redirect()->route('reclutador');

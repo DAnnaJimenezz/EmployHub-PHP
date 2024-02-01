@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CargoRequest;
 use App\Models\Cargo;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class CargoController extends Controller
         return view('cargo.create');
     }
 
-    public function Store(Request $request){
+    public function Store(CargoRequest $request){
 
         $cargo = new Cargo($request->validated());
         $cargo->save();
@@ -29,7 +30,7 @@ class CargoController extends Controller
     }
 
 
-    public function Update(Request $request, Cargo $cargo){
+    public function Update(CargoRequest $request, Cargo $cargo){
         
         $cargo->update($request->all()); 
         return redirect()->route('cargo');

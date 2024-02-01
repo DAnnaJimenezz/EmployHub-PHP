@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OfertaRequest;
 use App\Models\Oferta;
 use App\Models\Tipo_contrato;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class OfertaController extends Controller
         return view('/oferta/create',['tipo_contractos'=> $tipo_contractos]);
     }
 
-    public function Store(Request $request){
+    public function Store(OfertaRequest $request){
 
         // $oferta = new Oferta($request->validated());
         // $oferta->save();
@@ -36,7 +37,7 @@ class OfertaController extends Controller
     }
 
 
-    public function Update(Request $request, Oferta $oferta){
+    public function Update(OfertaRequest $request, Oferta $oferta){
         
         $oferta->update($request->all()); 
         return redirect()->route('oferta');

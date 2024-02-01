@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Usuario;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -17,12 +18,12 @@ class AdminTableSeeder extends Seeder
     public function run()
     {
         $adminUser = [
-            'nombre_usuario' => 'AdminCide',
+            'username' => 'AdminCide',
             'correo_electronico' => 'admincide@example.com',
-            'contraseña' => Hash::make('Cide899999034-1'),
+            'password' => Hash::make('Cide899999034-1'),
             'id_tipo_usuario' => 1,
         ];
 
-        Usuario::create($adminUser);
+        User::create($adminUser);
     }
 }

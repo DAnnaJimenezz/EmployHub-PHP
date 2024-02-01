@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RelacionRequest;
 use App\Models\Relacion;
 use App\Models\Tipo_usuario;
 use Illuminate\Http\Request;
@@ -20,7 +21,7 @@ class RelacionController extends Controller
         return view('/relacion/create',['tipo_usuario'=> $tipo_usuarios]);
     }
 
-    public function Store(Request $request){
+    public function Store(RelacionRequest $request){
 
         $relacion = new Relacion($request->validated());
         $relacion->save();
@@ -33,7 +34,7 @@ class RelacionController extends Controller
     }
 
 
-    public function Update(Request $request, Relacion $relacion){
+    public function Update(RelacionRequest $request, Relacion $relacion){
         
         $relacion->update($request->all()); 
         return redirect()->route('relacion');

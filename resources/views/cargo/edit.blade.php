@@ -5,12 +5,12 @@
 <a href="{{ route('cargo') }}"> Volver</a>
 
 <section class="create">
-    <h1 class="title">Editar tu <span>Publicación</span></h1>
+    <h1 class="title">Editar tu <span>Cargo</span></h1>
     <form action="{{ route('update.cargo', $cargo->id) }}" method="POST">
         @method('PUT')
         @csrf
 
-        <label>Escribe el nombre de la publicación:</label>
+        <label>Escribe el nombre del cargo:</label>
         <textarea  type="text" name="nombre_cargo" rows="4" cols="50" value="{{ $cargo-> nombre_cargo }}" required></textarea><br><br>
 
         <label>Escribe la dirección:</label>

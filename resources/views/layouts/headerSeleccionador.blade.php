@@ -2,7 +2,7 @@
 @section('content')
     <ul class="menu-selector">
         <li class="contenedor-selector">
-            <a href="#">Selector</a>
+            <a href="#">Seleccionadorr</a>
             <ul class="sub-Menu-selector">
                 <li><a href="">Consultar proceso de seleccion</a></li>
                 <li><a href="">Consultar lista de seleccionados</a></li>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PonderacionRequest;
 use App\Models\Ponderacion;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class PonderacionController extends Controller
         return view('ponderacion.create');
     }
 
-    public function Store(Request $request){
+    public function Store(PonderacionRequest $request){
         
         $ponderacion = new Ponderacion($request->validated());
         $ponderacion->save();
@@ -30,7 +31,7 @@ class PonderacionController extends Controller
     }
 
 
-    public function Update(Request $request, Ponderacion $ponderacion){
+    public function Update(PonderacionRequest $request, Ponderacion $ponderacion){
         
         $ponderacion->update($request->all()); 
         return redirect()->route('ponderacion');

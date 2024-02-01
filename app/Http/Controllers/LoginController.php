@@ -15,18 +15,18 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre_usuario' => 'required|string|max:10',
-            'contraseña' => 'required|string|max:20|min:10',
+            'username' => 'required|string|max:10',
+            'password' => 'required|string|max:20|min:10',
         ]);
         
-        if(!auth()->attempt($request->only('nombre_usuario', 'contraseña'))){
+        if(!auth()->attempt($request->only('username', 'password'))){
             return back()->with('mensaje', 'Credenciales incorrectas');
         }
 
-        $usuario = Auth::user();
-        session(['tipo_usuario' => $usuario->id_tipo_usuario]);
+        $user = Auth::user();
+        session(['tipo_usuario' => $user->id_tipo_usuario]);
 
-        switch ($usuario->id_tipo_usuario) {
+        switch ($user->id_tipo_usuario) {
             case 1:
                 return redirect()->route('headerAdmin');
             case 2:

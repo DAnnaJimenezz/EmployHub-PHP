@@ -5,8 +5,8 @@
             <a href="#termino">Candidato</a>
             <ul class="sub-Menu-candidate">
                 <li><a href="">Consultar Vacante</a></li>
-                <li><a href="{{ route('create.lifeSheet')}}">Registrar Hoja de Vida</a></li>
-                <li><a href="{{ route('offer') }}">Aplicar a una vacante</a></li>
+                <li><a href="{{ route('create.hoja_vida')}}">Registrar Hoja de Vida</a></li>
+                <li><a href="{{ route('oferta') }}">Aplicar a una vacante</a></li>
                 <li><a href="">Consultar Estado de Proceso</a></li>
             </ul>
         </li>

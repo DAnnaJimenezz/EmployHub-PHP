@@ -14,11 +14,11 @@ class WelcomeEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $usuario;
+    public $user;
 
-    public function __construct($usuario)
+    public function __construct($user)
     {
-        $this->usuario = $usuario;
+        $this->user = $user;
     }
 
     public function envelope()
@@ -34,14 +34,14 @@ class WelcomeEmail extends Mailable
         // return new Content(
         //     view: 'mails.welcome.blade',
         //     with: [
-        //         'usuario' => $this->usuario
+        //         'user' => $this->user
         //     ]
         // );
 
         return new Content(
             view: 'mails.welcome',
             with: [
-                'usuario' => $this->usuario
+                'user' => $this->user
             ]
         );
     }

@@ -77,11 +77,12 @@
         <label for="correo">Escribe el ID del Puesto</label>
         <input type="number" id=correo name="id_cargo" class="textarea1" required><br><br>
         
-        <label for="exampleInputEmail" class="user_type">ID del Tipo de Usuario</label>
-        <select class="user_type" name="id_tipo_usuario" id="">
-            @foreach ($user_types as $user_type)
-            <option value="{{$user_type->id}}">{{$user_type->user_type_name}}</option>    
+        <label for="exampleInputEmail" class="id_tipo_usuario"></label>
+        <select class="tipo_usuario" name="id_tipo_usuario" id="">
+            @foreach ($tipo_usuario as $tipo_usuarios)
+            <option value="{{$tipo_usuarios->id}}">{{$tipo_usuarios->nombre_tipo_usuario}}</option>    
             @endforeach
+        
         </select>
         
         <center><button type="submit" class="crear-oferta-button">Crear Empresa</button></center>

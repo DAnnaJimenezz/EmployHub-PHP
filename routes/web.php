@@ -25,6 +25,7 @@ use App\Http\Controllers\RelacionController;
 use App\Http\Controllers\SeleccionadorController;
 use App\Http\Controllers\TermsAndConditionsController;
 use App\Http\Controllers\TipoUsuarioController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
@@ -216,6 +217,6 @@ Route::post('login', [LoginController::class, 'store'])->name('login.auth');
 
 Route::get('home', [HomeController::class, 'index'])->name('home.index');
 
-Route::resource('usuario', UsuarioController::class);
-Route::get('register', [UsuarioController::class, 'create'])->name('register');
-Route::post('register', [UsuarioController::class, 'store']);
+Route::resource('usuario', UserController::class);
+Route::get('register', [UserController::class, 'create'])->name('register');
+Route::post('register', [UserController::class, 'store']);

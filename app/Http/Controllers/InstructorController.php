@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InstructorRequest;
 use App\Models\Instructor;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class InstructorController extends Controller
         return view('instructor.create');
     }
 
-    public function Store(Request $request){
+    public function Store(InstructorRequest $request){
 
         $instructor = new Instructor($request->validated());
         $instructor->save();
@@ -30,7 +31,7 @@ class InstructorController extends Controller
     }
 
 
-    public function Update(Request $request, Instructor $instructor){
+    public function Update(InstructorRequest $request, Instructor $instructor){
         
         $instructor->update($request->all()); 
         return redirect()->route('instructor');

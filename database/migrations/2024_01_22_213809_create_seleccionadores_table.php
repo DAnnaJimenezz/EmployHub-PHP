@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('seleccionadores', function (Blueprint $table) {
             $table->id();
-            $table->string('numero_documento_selector', 15);
-            $table->set('tipo_documento_selector', ['TI', 'CC', 'NIT', 'PASAPORTE', 'CC_EXTRANJERO']);
+            $table->string('numero_documento_seleccionador', 15);
+            $table->set('tipo_documento_seleccionador', ['TI', 'CC', 'NIT', 'PASAPORTE', 'CC_EXTRANJERO']);
             $table->string('nombre_selector', 25);
             $table->string('correo_electronico_selector', 30);
             $table->string('telefono_selector', 15);

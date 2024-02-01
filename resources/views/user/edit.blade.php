@@ -16,7 +16,7 @@
 
         <div class="mb-3">
             <label for="exampleInputEmail" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" name="email" value="{{old('email')}}" required>
+            <input type="correo_electronico" class="form-control" name="correo_electronico" value="{{old('correo_electronico')}}" required>
         </div>
 
         <div class="mb-3">

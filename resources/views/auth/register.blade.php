@@ -15,10 +15,10 @@
             </head>
                 <form action="{{ route('usuario.store') }}" method="POST">
                     @csrf
-                    <article class="nombre_usuario">
-                        <label for="nombre_usuario">
+                    <article class="username">
+                        <label for="username">
                             <img src="{{ asset('Img/USERNAME.png') }}" alt="Imagen" width="40px" height="40px" />
-                            <input type="text" name="nombre_usuario" placeholder="| Nombre Usuario" required value="{{ old('nombre_usuario') }}"/>
+                            <input type="text" name="username" placeholder="| Nombre Usuario" required value="{{ old('username') }}"/>
                         </label>
                     </article>
                     <br>
@@ -41,10 +41,10 @@
                     </article>
                     <br>
 
-                    <article class="contraseña">
-                        <label for="contraseña">
+                    <article class="password">
+                        <label for="password">
                             <img src="{{ asset('Img/PASSWORD.png') }}" alt="Imagen" width="40px" height="40px" />
-                            <input type="password" name="contraseña" placeholder="| Contraseña" required value="{{ old('contraseña') }}"/>
+                            <input type="password" name="password" placeholder="| Contraseña" required value="{{ old('password') }}"/>
                         </label>
                     </article>
 

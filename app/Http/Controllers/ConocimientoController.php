@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ConocimientoRequest;
 use App\Models\Conocimiento;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class ConocimientoController extends Controller
         return view('conocimiento.create');
     }
 
-    public function Store(Request $request){
+    public function Store(ConocimientoRequest $request){
 
         $conocimiento = new Conocimiento($request->validated());
         $conocimiento->save();
@@ -29,7 +30,7 @@ class ConocimientoController extends Controller
     }
 
 
-    public function Update(Request $request, Conocimiento $conocimiento){
+    public function Update(ConocimientoRequest $request, Conocimiento $conocimiento){
         
         $conocimiento->update($request->all()); 
         return redirect()->route('conocimiento');

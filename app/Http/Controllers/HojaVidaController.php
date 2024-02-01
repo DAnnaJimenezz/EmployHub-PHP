@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\HojaVidaRequest;
 use App\Models\Hoja_vida;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class HojaVidaController extends Controller
         return view('hojavida.create');
     }
 
-    public function Store(Request $request){
+    public function Store(HojaVidaRequest $request){
 
         // $hoja_vida = new Hoja_vida($request->validated());
         // $hoja_vida->save();
@@ -32,7 +33,7 @@ class HojaVidaController extends Controller
     }
 
 
-    public function Update(Request $request, Hoja_vida $hoja_vida){
+    public function Update(HojaVidaRequest $request, Hoja_vida $hoja_vida){
         
         $hoja_vida->update($request->all()); 
         return redirect()->route('hoja_vida');

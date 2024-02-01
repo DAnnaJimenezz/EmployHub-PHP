@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SeleccionadorRequest;
 use App\Models\Seleccionador;
 use App\Models\Tipo_usuario;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class SeleccionadorController extends Controller
         return view('/seleccionador/create',['tipo_usuario'=> $tipo_usuarios]);
     }
 
-    public function Store(Request $request){
+    public function Store(SeleccionadorRequest $request){
 
         // $seleccionador = new Seleccionador($request->validated());
         // $seleccionador->save();
@@ -37,7 +38,7 @@ class SeleccionadorController extends Controller
     }
 
 
-    public function Update(Request $request, Seleccionador $seleccionador){
+    public function Update(SeleccionadorRequest $request, Seleccionador $seleccionador){
         
         $seleccionador->update($request->all()); 
         return redirect()->route('seleccionador');

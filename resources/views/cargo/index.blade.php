@@ -9,7 +9,7 @@
         <table>
             <tr>
                 <th>ID</th>
-                <th>Nombre de la Publicación</th>
+                <th>Nombre del Cargo</th>
                 <th>Dirección</th>
                 <th>Teléfono</th>
             </tr>

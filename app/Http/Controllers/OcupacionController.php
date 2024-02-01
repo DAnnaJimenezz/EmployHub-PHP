@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\OcupacionRequest;
 use App\Models\Ocupacion;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class OcupacionController extends Controller
         return view('ocupacion.create');
     }
 
-    public function Store(Request $request){
+    public function Store(OcupacionRequest $request){
 
         $ocupacion = new Ocupacion($request->validated());
         $ocupacion->save();
@@ -29,7 +30,7 @@ class OcupacionController extends Controller
     }
 
 
-    public function Update(Request $request, Ocupacion $ocupacion){
+    public function Update(OcupacionRequest $request, Ocupacion $ocupacion){
         
         $ocupacion->update($request->all()); 
         return redirect()->route('ocupacion');

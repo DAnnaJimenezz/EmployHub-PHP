@@ -30,10 +30,10 @@
         <label>Escribe tu correo electrónico:</label>
         <input type="text" name="correo_electronico_selector" required><br><br>
 
-        <label for="" class="form-label">ID del Tipo de Usuario</label>
-        <select class="" name="id_tipo_usuario" id="id_tipo_usuario">
-            @foreach ($user_type as $user_type)
-            <option value="{{$user_type->id}}">{{$user_type->user_type_name }}</option>    
+        <label for="exampleInputEmail" class="id_tipo_usuario"></label>
+        <select class="tipo_usuario" name="id_tipo_usuario" id="">
+            @foreach ($tipo_usuario as $tipo_usuarios)
+            <option value="{{$tipo_usuarios->id}}">{{$tipo_usuarios->nombre_tipo_usuario}}</option>    
             @endforeach
         </select>
 
