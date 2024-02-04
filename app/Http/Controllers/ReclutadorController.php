@@ -19,7 +19,7 @@ class ReclutadorController extends Controller
     public function Create(){
 
         $tipo_usuarios = Tipo_usuario::all();
-        return view('/reclutador/create',['tipo_usuario'=> $tipo_usuarios]);
+        return view('reclutador.create',['tipo_usuario'=> $tipo_usuarios]);
     }
 
     public function Store(ReclutadorRequest $request){

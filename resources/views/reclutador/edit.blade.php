@@ -33,5 +33,5 @@
 
         <center><button type="submit" class="create-application-button" value="Update">Actualizar</button></center>
     </form>
+    @endsection
 </section>
-@endsection

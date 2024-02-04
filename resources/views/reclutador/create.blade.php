@@ -2,7 +2,6 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('/css/Reclutadores/createRecruiter.css') }}">
-<a href="{{ route ('reclutador') }}"> Regresar</a>
 
 <section class="create">
     <h1 class="title">Cree su <span>Reclutador</span></h1>
@@ -39,5 +38,5 @@
 
         <center><button type="submit" class="create-application-button">Crear</button></center>
     </form>
+    @endsection
 </section>
-@endsection

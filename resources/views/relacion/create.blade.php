@@ -1,12 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('/css/Relations/createRelation.css') }}">
-<a href="{{ route ('relation') }}"> Regresar</a>
+<link rel="stylesheet" href="{{ asset('/css/Relaciones/createRelation.css') }}">
 
 <section class="create">
     <h1 class="title">Cree su <span>Relación</span></h1>
-    <form action="{{ route('store.relation') }}" method="POST">
+    <form action="{{ route('store.relacion') }}" method="POST">
         @csrf
 
         <label>Escriba el nombre de la ocupación relacionada:</label>

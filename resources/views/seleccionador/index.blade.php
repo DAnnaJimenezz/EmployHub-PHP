@@ -18,8 +18,8 @@
             </tr>
             <tr>
                 <td><a>{{ $seleccionador->id }}</a></td>
-                <td><a>{{ $seleccionador->numero_documento_selector }}</a></td>
-                <td><a>{{ $seleccionador->tipo_documento_selector }}</a></td>
+                <td><a>{{ $seleccionador->numero_documento_seleccionador }}</a></td>
+                <td><a>{{ $seleccionador->tipo_documento_seleccionador }}</a></td>
                 <td><a>{{ $seleccionador->nombre_selector }}</a></td>
                 <td><a>{{ $seleccionador->telefono_selector }}</a></td>
                 <td><a>{{ $seleccionador->correo_electronico_selector }}</a></td>

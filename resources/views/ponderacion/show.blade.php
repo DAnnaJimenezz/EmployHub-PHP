@@ -2,7 +2,7 @@
 
 @section('content')
 
-<a href="{{ route('index.ponderacion')}}">Volver</a>
+<a href="{{ route('ponderacion')}}">Volver</a>
 <h1>{{ $ponderacion->idiomas }}</h1>
 <h1>{{ $ponderacion->educacion }}</h1>
 <h1>{{ $ponderacion->experiencia_laboral }}</h1>

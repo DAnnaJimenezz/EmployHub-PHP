@@ -3,12 +3,11 @@
 
 <link rel="stylesheet" href="{{ asset('/css/edit.css') }}">
 
-<a href="{{ route('ponderacion')}}">Regresar</a>
 <form action="{{ route('update.ponderacion', $ponderacion ->id) }}" method="POST">
     @method('PUT')
     @csrf
     <label>Seleccione los idiomas que conoce:</label>
-    <select id="tipo_idioma" name="idiomas" value="{{ $ponderacion-> idiomas }}">
+    <select id="idiomas" name="idiomas" value="{{ $ponderacion-> idiomas }}">
         <option value="INGLÉS">INGLÉS</option>
         <option value="FRANCÉS">FRANCÉS</option>
         <option value="ALEMÁN">ALEMÁN</option>

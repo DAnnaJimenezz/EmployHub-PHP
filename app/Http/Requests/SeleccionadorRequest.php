@@ -13,7 +13,7 @@ class SeleccionadorRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,11 +25,11 @@ class SeleccionadorRequest extends FormRequest
     {
         return [
             'numero_documento_seleccionador' => ['required', 'string', 'max:15'],
-            'tipo_documento_seleccionador' => ['required', 'in:TI,CC,NIT,PASSPORT,CC_FOREIGNER'],
+            'tipo_documento_seleccionador' => ['required', 'in:TI,CC,NIT,PASAPORTE,CC_EXTRANJERO'],
             'nombre_selector' => ['required', 'string', 'max:25'],
             'correo_electronico_selector' => ['required', 'email', 'max:30'],
             'telefono_selector' => ['required', 'string', 'max:15'],
-            'id_tipo_usuario' => ['required', 'exists:user_types,id'],
+            'id_tipo_usuario' => ['required', 'exists:tipo_usuarios,id'],
         ];
     }
 }

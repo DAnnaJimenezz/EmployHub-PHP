@@ -12,8 +12,8 @@ class Seleccionador extends Model
     protected $table = 'seleccionadores';
 
     protected $fillable = [
-        'numero_documento_selector',
-        'tipo_documento_selector',
+        'numero_documento_seleccionador',
+        'tipo_documento_seleccionador',
         'nombre_selector',
         'telefono_selector',
         'correo_electronico_selector',

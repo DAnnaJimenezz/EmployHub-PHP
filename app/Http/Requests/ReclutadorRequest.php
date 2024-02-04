@@ -25,7 +25,7 @@ class ReclutadorRequest extends FormRequest
     {
         return [
             'numero_documento' => ['required', 'string', 'max:15'],
-            'tipo_documento' => ['required', 'in:TI,CC,NIT,PASSPORT,CC_FOREIGNER'],
+            'tipo_documento' => ['required', 'in:TI,CC,NIT,PASAPORTE,CC_EXTRANJERO'],
             'nombre' => ['required', 'string', 'max:25'],
             'telefono' => ['required', 'string', 'max:15'],
             'correo_electronico' => ['required', 'email', 'max:30'],

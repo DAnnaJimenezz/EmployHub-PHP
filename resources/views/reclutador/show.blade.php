@@ -2,7 +2,7 @@
 
 @section('content')
 
-<a href="{{ route('index.reclutador')}}">Volver</a>
+<a href="{{ route('reclutador')}}">Volver</a>
 <h1>{{ $reclutador->numero_documento }}</h1>
 <h1>{{ $reclutador->tipo_documento }}</h1>
 <h1>{{ $reclutador->nombre }}</h1>

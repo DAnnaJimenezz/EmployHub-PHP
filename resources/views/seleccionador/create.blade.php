@@ -2,18 +2,17 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('/css/Seleccionadores/createSelector.css') }}">
-<a href="{{ route ('seleccionador') }}"> Volver</a>
 
 <section class="create">
-    <h1 class="title">Crea tu <span>Selector</span></h1>
+    <h1 class="title">Crea tu <span>Seleccionador</span></h1>
     <form action="{{ route('store.seleccionador') }}" method="POST">
         @csrf
 
         <label>Escribe tu número de documento:</label>
-        <input name="numero_documento_selector" type="number" required><br><br>
+        <input name="numero_documento_seleccionador" type="number" required><br><br>
 
         <label for="tipo_selector">Tipo de Documento</label>
-        <select id="tipo_selector" name="tipo_documento_selector">
+        <select id="tipo_selector" name="tipo_documento_seleccionador">
             <option value="TI">TI</option>
             <option value="CC">CC</option>
             <option value="NIT">NIT</option>

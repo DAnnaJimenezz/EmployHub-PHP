@@ -2,14 +2,13 @@
 @section('content')
 
 <link rel="stylesheet" href="{{ asset('/css/Ponderaciones/weighing.css') }}">
-<a href="{{ route ('ponderacion') }}"> Regresar</a>
 
 <section class="create">
     <h1 class="title">Cree su <span>Ponderación</span></h1>
     <form action="{{ route('store.ponderacion') }}" method="POST">
         @csrf
         <label>Seleccione los idiomas que conoce:</label>
-        <select id="tipo_idioma" name="idiomas">
+        <select id="idiomas" name="idiomas">
             <option value="INGLÉS">INGLÉS</option>
             <option value="FRANCÉS">FRANCÉS</option>
             <option value="ALEMÁN">ALEMÁN</option>
@@ -17,7 +16,7 @@
         </select><br><br>
 
         <label>Seleccione hasta qué nivel de estudio ha cursado:</label>
-        <select id="tipo_educacion" name="educacion">
+        <select id="educacion" name="educacion">
             <option value="LICENCIATURA">LICENCIATURA</option>
             <option value="POSTGRADO">POSTGRADO</option>
             <option value="GRADO">GRADO</option>
@@ -43,5 +42,5 @@
 
         <center><button type="submit" class="create-application-button">Crear</button></center>
     </form>
+    @endsection
 </section>
-@endsection

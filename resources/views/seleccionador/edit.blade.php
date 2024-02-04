@@ -11,10 +11,10 @@
         @csrf
 
         <label>Escribe tu número de documento:</label>
-        <input name="numero_documento_selector" type="number" required value="{{ $seleccionador->numero_documento_selector }}"><br><br>
+        <input name="numero_documento_seleccionador" type="number" required value="{{ $seleccionador->numero_documento_selector }}"><br><br>
 
         <label for="tipo_selector">Tipo de Documento</label>
-        <select id="tipo_selector" name="tipo_documento_selector" value="{{ $seleccionador->tipo_documento_selector }}">
+        <select id="tipo_selector" name="tipo_documento_seleccionador" value="{{ $seleccionador->tipo_documento_selector }}">
             <option value="TI">TI</option>
             <option value="CC">CC</option>
             <option value="NIT">NIT</option>
