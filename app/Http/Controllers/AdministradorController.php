@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Administrador;
+use App\Models\Tipo_usuario;
 use Illuminate\Http\Request;
 
 class AdministradorController extends Controller
@@ -16,7 +17,9 @@ class AdministradorController extends Controller
     }
 
     public function create(){
-        return view('administrador.create');
+
+        $tipo_usuarios = Tipo_usuario::all();
+        return view('administrador.create',['tipo_usuario'=> $tipo_usuarios]);
     }
 
     public function store(Request $request){

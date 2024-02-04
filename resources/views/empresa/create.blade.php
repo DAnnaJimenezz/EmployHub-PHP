@@ -17,7 +17,7 @@
         <label for="tipo_empresa">Tipo de Empresa</label>
         <select id="tipo_empresa" name="tipo_empresa">
             <option value="NO_DEFINIDO">No definido</option>
-            <option value="LIMITADA">Limitada</option>
+            <option value="SOCIEDAD_LIMITADA">Sociedad Limitada</option>
             <option value="ANÓNIMA">Anónima</option>
             <option value="DOMINIO">Comanditaria</option>
             <option value="SOCIEDAD_ASOCIATIVA">Sociedad Asociativa</option>
@@ -52,7 +52,7 @@
         <h2>Datos de Ubicación</h2>
         
         <label for="direccion">*Correo Empresa</label>
-        <textarea name="correo_empresa" rows="4" cols="50" required></textarea><br><br>
+        <input type="text" name="correo_empresa" rows="4" cols="50" required></input><br><br>
 
         <label for="telefono">*Teléfono</label>
         <input type="text" id="telefono" name="telefono_empresa" required><br><br>
@@ -63,7 +63,7 @@
         <h2>Datos de Recursos Humanos</h2>
         
         <label for="recursos-humanos">*Gerente de Recursos Humanos</label>
-        <input type="text" id="recursos-humanos" name="gerente_recurso_humanos" required><br><br>
+        <input type="text" id="recursos-humanos" name="gerente_recursos_humanos" required><br><br>
 
         <label for="telefono">*Teléfono</label>
         <input type="text" id="telefono" name="telefono_alternativo_gerente" required><br><br>
@@ -77,12 +77,11 @@
         <label for="correo">Escribe el ID del Puesto</label>
         <input type="number" id=correo name="id_cargo" class="textarea1" required><br><br>
         
-        <label for="exampleInputEmail" class="id_tipo_usuario"></label>
+        <label for="exampleInputEmail" class="id_tipo_usuario">Tipo de Usuario</label>
         <select class="tipo_usuario" name="id_tipo_usuario" id="">
             @foreach ($tipo_usuario as $tipo_usuarios)
             <option value="{{$tipo_usuarios->id}}">{{$tipo_usuarios->nombre_tipo_usuario}}</option>    
             @endforeach
-        
         </select>
         
         <center><button type="submit" class="crear-oferta-button">Crear Empresa</button></center>

@@ -29,7 +29,7 @@ class ReclutadorRequest extends FormRequest
             'nombre' => ['required', 'string', 'max:25'],
             'telefono' => ['required', 'string', 'max:15'],
             'correo_electronico' => ['required', 'email', 'max:30'],
-            'id_tipo_usuario' => ['required', 'exists:user_types,id'],
+            'id_tipo_usuario' => ['required', 'exists:tipo_usuarios,id'],
         ];
     }
 }

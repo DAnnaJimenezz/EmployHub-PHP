@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('nombre_instructor', 30);
             $table->string('apellido_instructor', 30);
             $table->string('correo_electronico', 50);
-            $table->string('contrasena');
+            $table->string('contraseña');
             $table->foreignId('id_administrador')->constrained('administradores')->onDelete('cascade');
             $table->timestamps();
         });

@@ -17,7 +17,7 @@
             <label for="tipo_empresa">Tipo de Empresa</label>
             <select id="tipo_empresa" name="tipo_empresa" value="{{ $empresa->tipo_empresa }}">
                 <option value="NO_DEFINIDO">No definido</option>
-                <option value="LIMITADA">Limitada</option>
+                <option value="SOCIEDAD_LIMITADA">Limitada</option>
                 <option value="ANÓNIMA">Anónima</option>
                 <option value="DOMINIO">Comanditaria</option>
                 <option value="SOCIEDAD_ASOCIATIVA">Sociedad Asociativa</option>
@@ -57,22 +57,22 @@
 
         
             <label for="telefono2">Teléfono Alternativo</label>
-            <input type="text" id="telefono2" name="telefono_alternativo_empresa" value="{{ $company->telefono_alternativo_empresa }}"><br><br>
+            <input type="text" id="telefono2" name="telefono_alternativo_empresa" value="{{ $empresa->telefono_alternativo_empresa }}"><br><br>
 
             <h2>Datos de Recursos Humanos</h2>
             
             <label for="recursos-humanos">*Gerente de Recursos Humanos</label>
-            <input type="text" id="recursos-humanos" name="gerente_recursos_humanos" required value="{{ $company->gerente_recursos_humanos }}"><br><br>
+            <input type="text" id="recursos-humanos" name="gerente_recursos_humanos" required value="{{ $empresa->gerente_recursos_humanos }}"><br><br>
 
             <label for="telefono">*Teléfono</label>
-            <input type="text" id="telefono" name="telefono_gerente" required value="{{ $company->telefono_gerente }}"><br><br>
+            <input type="text" id="telefono" name="telefono_gerente" required value="{{ $empresa->telefono_gerente }}"><br><br>
 
         
             <label for="telefono2">Teléfono Alternativo</label>
-            <input type="text" id="telefono2" name="telefono_alternativo_gerente" value="{{ $company->telefono_alternativo_gerente }}"><br><br>
+            <input type="text" id="telefono2" name="telefono_alternativo_gerente" value="{{ $empresa->telefono_alternativo_gerente }}"><br><br>
 
             <label for="correo">*Correo Electrónico del Gerente</label>
-            <input type="text" id=correo name="correo_gerente" class="textarea1" required value="{{ $company->correo_gerente }}"><br><br>
+            <input type="text" id=correo name="correo_gerente" class="textarea1" required value="{{ $empresa->correo_gerente }}"><br><br>
             
             <center><button type="submit" class="crear-oferta-button" value="Update">Actualizar</button></center>
         </section>

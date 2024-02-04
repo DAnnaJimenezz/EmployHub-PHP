@@ -15,11 +15,12 @@ class OfertaController extends Controller
         return view("oferta.index", ["ofertas"=> $ofertas]);
     }
     
-    public function Create(){
-
-        $tipo_contractos = Tipo_contrato::all();
-        return view('/oferta/create',['tipo_contractos'=> $tipo_contractos]);
+    public function Create()
+    {
+        $tipo_contratos = Tipo_contrato::all();
+        return view('oferta.create', ['tipo_contratos' => $tipo_contratos]);
     }
+    
 
     public function Store(OfertaRequest $request){
 

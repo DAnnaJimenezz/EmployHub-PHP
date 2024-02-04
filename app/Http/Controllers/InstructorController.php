@@ -20,10 +20,15 @@ class InstructorController extends Controller
 
     public function Store(InstructorRequest $request){
 
-        $instructor = new Instructor($request->validated());
-        $instructor->save();
+        $id_administrador = auth()->user()->id;
 
-        return redirect('instructor')->with('success', 'Instructor creado exitosamente');
+        $instructorData = $request->validated();
+
+        $instructorData['id_administrador'] = $id_administrador;
+
+        $instructor = Instructor::create($instructorData);
+
+        return redirect()->route('instructor')->with('success', 'Instructor creado exitosamente');
     }
 
     public function Edit (Instructor $instructor){

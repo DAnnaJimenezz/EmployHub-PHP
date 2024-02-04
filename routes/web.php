@@ -156,13 +156,13 @@ Route::delete('/relacion/destroy/{relacion}', [RelacionController::class,'Destro
 
 // Rutas Seleccionador
 Route::get('/headerSeleccionador', [SeleccionadorController::class, 'header'])->name('headerSeleccionador');
-Route::get('/selector', [SeleccionadorController::class, 'Seleccionador'])->name('selector');
-Route::get('/selector/create', [SeleccionadorController::class, 'Create'])->name('create.selector')->middleware('auth');;
-Route::post('/selector/store', [SeleccionadorController::class, 'Store'])->name('store.selector');
-Route::get('/selector/edit/{selector}', [SeleccionadorController::class,'Edit'])->name('edit.selector');
-Route::put('/selector/update/{selector}', [SeleccionadorController::class,'Update'])->name('update.selector');
-Route::get('/selector/show/{selector}', [SeleccionadorController::class,'Show'])->name('show.selector');
-Route::delete('/selector/destroy/{selector}', [SeleccionadorController::class,'Destroy'])->name('destroy.selector');
+Route::get('/seleccionador', [SeleccionadorController::class, 'Seleccionador'])->name('seleccionador');
+Route::get('/seleccionador/create', [SeleccionadorController::class, 'Create'])->name('create.seleccionador')->middleware('auth');;
+Route::post('/seleccionador/store', [SeleccionadorController::class, 'Store'])->name('store.seleccionador');
+Route::get('/seleccionador/edit/{seleccionador}', [SeleccionadorController::class,'Edit'])->name('edit.seleccionador');
+Route::put('/seleccionador/update/{seleccionador}', [SeleccionadorController::class,'Update'])->name('update.seleccionador');
+Route::get('/seleccionador/show/{seleccionador}', [SeleccionadorController::class,'Show'])->name('show.seleccionador');
+Route::delete('/seleccionador/destroy/{seleccionador}', [SeleccionadorController::class,'Destroy'])->name('destroy.seleccionador');
 
 // Rutas Estado 
 Route::get('/estado', [EstadoController::class, 'Estado'])->name('estado');
@@ -192,7 +192,7 @@ Route::get('/oferta/show/{oferta}', [OfertaController::class,'Show'])->name('sho
 Route::delete('/oferta/destroy/{oferta}', [OfertaController::class,'Destroy'])->name('destroy.oferta');
 
 // Rutas Ponderaciones
-Route::get('/ponderacion', [PonderacionController::class, 'Pondetacion'])->name('ponderacion');
+Route::get('/ponderacion', [PonderacionController::class, 'Ponderacion'])->name('ponderacion');
 Route::get('/ponderacion/create', [PonderacionController::class, 'Create'])->name('create.ponderacion')->middleware('auth');
 Route::post('/ponderacion/store', [PonderacionController::class, 'Store'])->name('store.ponderacion');
 Route::get('/ponderacion/edit/{ponderacion}', [PonderacionController::class,'Edit'])->name('edit.ponderacion');

@@ -33,7 +33,7 @@ class OfertaRequest extends FormRequest
             'fecha_fin' => ['required', 'date', 'after_or_equal:start_date'],
             'meses_experiencia' => ['required', 'integer', 'min:0'],
             'requisitos' => ['required', 'string', 'max:500'],
-            'id_tipos_contrato' => ['required', 'exists:contract_types,id'],
+            'id_tipos_contrato' => ['required', 'exists:tipo_contratos,id'],
         ];
     }
 }

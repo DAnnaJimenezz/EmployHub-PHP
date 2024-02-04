@@ -24,8 +24,8 @@ class Oferta extends Model
         'requisitos',
     ];
 
-    public function tipoContrato()
+    public function tipo_contratos()
     {
-        return $this->belongsTo(Tipo_contrato::class, 'id_tipo_contrato');
+        return $this->belongsTo(Tipo_contrato::class, 'id_tipos_contrato');
     }
 }

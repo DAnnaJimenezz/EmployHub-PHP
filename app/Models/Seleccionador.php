@@ -17,6 +17,11 @@ class Seleccionador extends Model
         'nombre_selector',
         'telefono_selector',
         'correo_electronico_selector',
-        'id_tipos_usuario',
+        'id_tipo_usuario',
     ];
+
+    public function userType()
+    {
+        return $this->belongsTo(Tipo_usuario::class, 'id_tipo_usuario');
+    }
 }

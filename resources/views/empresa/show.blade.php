@@ -2,7 +2,7 @@
 
 @section('content')
 
-<a href="{{ route('index.empresa')}}">Volver</a>
+<a href="{{ route('empresa')}}">Volver</a>
 <h1>{{ $empresa->nombre_empresa }}</h1>
 <h1>{{ $empresa->representante_legal }}</h1>
 <h1>{{ $empresa->tipo_empresa }}</h1>

@@ -10,7 +10,7 @@
         @csrf
 
         <label>Escribe tu número de documento:</label>
-        <textarea  type="number" name="numero_documento" rows="4" cols="50" required></textarea><br><br>
+        <input  type="number" name="numero_documento" required></input><br><br>
 
         <label>Selecciona tu tipo de documento:</label><br>
         <select id="tipo_documento" name="tipo_documento">
@@ -31,7 +31,10 @@
         <input type="text" name="correo_electronico" required><br><br>
 
         <label>Escribe tu contraseña:</label>
-        <input type="password" name="contrasena" required><br><br>
+        <input type="password" name="contraseña" required><br><br>
+
+        <label>Id Administrador:</label>
+        <input type="number" name="id_administrador" required><br><br
 
         <center><button type="submit" class="create-application-button">Crear</button></center>
     </form>

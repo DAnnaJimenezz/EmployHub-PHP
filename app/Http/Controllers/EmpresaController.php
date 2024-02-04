@@ -18,11 +18,11 @@ class EmpresaController extends Controller
     
     public function Create(){
 
-        $tipos_usuarios = Tipo_usuario::all();
-        return view('empresa.create',['tipos_usuarios'=> $tipos_usuarios]);
+        $tipo_usuarios = Tipo_usuario::all();
+        return view('empresa.create',['tipo_usuario'=> $tipo_usuarios]);
     }
 
-    public function Store(EmpresaRequest $request){;
+    public function Store(EmpresaRequest $request){
 
         $empresa = new Empresa($request->validated());
         $empresa->save();

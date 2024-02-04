@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<link rel="stylesheet"  href="{{ asset('/css/Ofertas/crearOferta.css') }}">
+<link rel="stylesheet"  href="{{ asset('/css/Ofertas/createOffert.css') }}">
     <section class="crearOferta">
         <h1 class="tituloOferta">Crea Tu <span>Oferta</span></h1>
         <form action="{{ route('store.oferta') }}" method="POST">
@@ -30,11 +30,12 @@
             <input type="number" id="experiencia" name="meses_experiencia" min="0" max="120" required>
             
             <label for="tipo_contrato" class="form-label">Tipo de Contrato</label>
-            <select class="form-select" name="id_tipos_contrato" id="">
-                @foreach ($tipos_contrato as $tipo_contrato)
-                <option value="{{$tipo_contrato->id}}">{{$tipo_contrato->nombre_contrato}}</option>    
+            <select class="form-select" name="id_tipos_contrato">
+                @foreach ($tipo_contratos as $tipo_contrato)
+                    <option value="{{ $tipo_contrato->id }}">{{ $tipo_contrato->nombre_contrato }}</option>
                 @endforeach
             </select>
+            
     
             <label for="requisitos">Requisitos:</label>
             <textarea id="requisitos" name="requisitos" rows="4" cols="50" required></textarea><br><br>

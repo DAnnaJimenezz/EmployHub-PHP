@@ -11,11 +11,11 @@ class HojaVidaController extends Controller
     public function Hoja_vida (){
 
         $hojas_vidas = Hoja_vida::all();
-        return view("hojavida.index", compact("hojas_vidas"));
+        return view("hoja_vida.index", compact("hojas_vidas"));
     }
     
     public function Create(){
-        return view('hojavida.create');
+        return view('hoja_vida.create');
     }
 
     public function Store(HojaVidaRequest $request){
@@ -29,7 +29,7 @@ class HojaVidaController extends Controller
     }
 
     public function Edit (Hoja_vida $hoja_vida){
-        return view('hojavida.edit', compact('hoja_vida'));
+        return view('hoja_vida.edit', compact('hoja_vida'));
     }
 
 
@@ -40,7 +40,7 @@ class HojaVidaController extends Controller
     }
 
     public function Show(Hoja_vida $hoja_vida){
-        return view ('hojavida.show', compact('hoja_vida'));
+        return view ('hoja_vida.show', compact('hoja_vida'));
     }
 
     public function Destroy (Request $request, Hoja_vida $hoja_vida){ 

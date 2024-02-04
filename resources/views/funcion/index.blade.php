@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('/css/Funciones/indexFuncion.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/index.css') }}">
 <a href="{{ route('create.funcion') }}" class="boton1">Crear Nueva Función</a>
 <div class="container1">
     <ul>

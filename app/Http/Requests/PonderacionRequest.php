@@ -24,9 +24,9 @@ class PonderacionRequest extends FormRequest
     public function rules()
     {
         return [
-            'idiomas' => ['required', 'in:ENGLISH,FRENCH,GERMAN,SPANISH'],
-            'educacion' => ['required', 'in:BACHELORS DEGREE,POSTGRADUATE,UNDERGRADUATE,TECHNICIAN,TECHNOLOGIST,ENGINEER'],
-            'experiencia ' => ['required', 'string', 'max:30'],
+            'idiomas' => ['required', 'in:INGLÉS,FRANCÉS,ALEMÁN,ESPAÑOL'],
+            'educacion' => ['required', 'in:LICENCIATURA,POSTGRADO, GRADO, TÉCNICO, TECNÓLOGO,INGENIERO'],
+            'experiencia_laboral ' => ['required', 'string', 'max:30'],
             'habilidades_tecnicas' => ['required', 'string'],
             'proyecto_anterior' => ['required', 'string', 'max:60'],
             'referencias' => ['required', 'string', 'max:40'],

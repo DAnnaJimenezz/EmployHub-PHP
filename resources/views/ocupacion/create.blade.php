@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('/css/Occupations/createOccupation.css') }}">
-<a href="{{ route ('occupation') }}"> Volver</a>
+<link rel="stylesheet" href="{{ asset('/css/Ocupaciones/createOccupation.css') }}">
+<a href="{{ route ('ocupacion') }}"> Volver</a>
 
 <section class="create">
     <h1 class="title">Crear tu <span>Ocupación</span></h1>
-    <form action="{{ route('store.occupation') }}" method="POST">
+    <form action="{{ route('store.ocupacion') }}" method="POST">
         @csrf
 
         <label>Escribe el nombre de la ocupación:</label>

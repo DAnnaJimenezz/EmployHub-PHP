@@ -24,9 +24,10 @@ class HojaVidaRequest extends FormRequest
     public function rules()
     {
         return [
+            'descripcion_personal' => ['required', 'string', 'max:500'],
             'experiencia' => ['required', 'string', 'max:500'],
             'educacion' => ['required', 'string', 'max:500'],
-            'idiomas' => ['required', 'boolean'],
+            'idiomas' => ['required', 'string', 'max:300'],
         ];
     }
 }

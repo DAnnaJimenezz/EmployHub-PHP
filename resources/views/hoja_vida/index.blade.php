@@ -7,7 +7,7 @@
         <h1>Centro de Empleo <span>Laboral</span></h1>
         <section class="contenedor2">
             <section class="estadoProceso">
-                @foreach ($hoja_vidas as $hoja_vida)
+                @foreach ($hojas_vidas as $hoja_vida)
                     <article class="element01">
                         <img class="imagen01" alt="imagen01" src="../Img/Usuario.png" width="150px" height="150px" />
 

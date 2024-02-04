@@ -24,8 +24,8 @@ class InstructorRequest extends FormRequest
     public function rules()
     {
         return [
-            'tipo_documento' => ['required', 'in:TI,CC,NIT,PASSPORT,CC_FOREIGNER'],
-            'numero_documento' => ['required', 'unique:instructors', 'max:20'],
+            'tipo_documento' => ['required', 'in:TI,CC,NIT,PASAPORTE,CC_EXTRANJERO'],
+            'numero_documento' => ['required', 'unique:instructores', 'max:20'],
             'nombre_instructor' => ['required', 'string', 'max:30'],
             'apellido_instructor' => ['required', 'string'],
             'correo_electronico' => ['required', 'string', 'max:50'],

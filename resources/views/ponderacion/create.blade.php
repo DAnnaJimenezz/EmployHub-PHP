@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('/css/Ponderaciones/ponderacion.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/Ponderaciones/weighing.css') }}">
 <a href="{{ route ('ponderacion') }}"> Regresar</a>
 
 <section class="create">

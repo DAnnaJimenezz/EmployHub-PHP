@@ -12,13 +12,13 @@
         <input type="text" name="descripcion_personal"  required>
 
         <label for="idiomas">Idiomas:</label>
-        <textarea name="idiomas"  required></textarea>
+        <input type='text' name="idiomas"  required></input>
 
-        <label for="experiencia">Experiencia:</label>
-        <textarea name="experiencia" required></textarea>
+        <label for="experiencia">Experiencia:</label> 
+        <input type='text' name="experiencia" required></input>
 
         <label for="educacion">Educación:</label>
-        <textarea name="educacion" required></textarea>
+        <input type='text' name="educacion" required></input>
 
         <center><button type="submit" class="create-application-button">Crear</button></center>
     </form>

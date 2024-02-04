@@ -17,7 +17,7 @@ class Instructor extends Model
         'nombre_instructor',
         'apellido_instructor',
         'correo_electronico',
-        'contrasena',
-        'id_administradores',
+        'contraseña',
+        'id_administrador',
     ];
 }

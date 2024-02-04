@@ -19,11 +19,5 @@ class Ponderacion extends Model
         'proyecto_anterior',
         'referencias',
         'curso_adicional',
-        'id_pesajes',
     ];
-
-    public function ponderacion()
-    {
-        return $this->belongsTo(Ponderacion::class, 'id_ponderacion');
-    }
 }

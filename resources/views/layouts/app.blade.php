@@ -17,8 +17,8 @@
             <nav class="navegacion">
                 <ul class="menu">
                     <li><a class="activa" href="{{ route('layouts') }}">Home</a></li>
-                    <li><a class="sobreNosotros" href="{{ route('aboutUs') }}">About Us</a></li>
-                    <li><a class="terminos" href="{{ route('termsConditions') }}">Terms and Conditions</a></li>            
+                    <li><a class="sobreNosotros" href="{{ route('aboutUs') }}">Sobre Nosotros</a></li>
+                    <li><a class="terminos" href="{{ route('termsConditions') }}">Terminos y Condiciones</a></li>            
                 </ul>
             </nav>
 

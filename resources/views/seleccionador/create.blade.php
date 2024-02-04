@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<link rel="stylesheet" href="{{ asset('/css/Selectors/createSelector.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/Seleccionadores/createSelector.css') }}">
 <a href="{{ route ('seleccionador') }}"> Volver</a>
 
 <section class="create">
@@ -30,7 +30,7 @@
         <label>Escribe tu correo electrónico:</label>
         <input type="text" name="correo_electronico_selector" required><br><br>
 
-        <label for="exampleInputEmail" class="id_tipo_usuario"></label>
+        <label for="exampleInputEmail" class="id_tipo_usuario">Tipo Usuario</label>
         <select class="tipo_usuario" name="id_tipo_usuario" id="">
             @foreach ($tipo_usuario as $tipo_usuarios)
             <option value="{{$tipo_usuarios->id}}">{{$tipo_usuarios->nombre_tipo_usuario}}</option>    

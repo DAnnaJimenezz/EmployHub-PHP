@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<link rel="stylesheet" href="{{ asset('/css/Ofertas/indexOferta.css') }}">
+<link rel="stylesheet" href="{{ asset('/css/Ofertas/indexOffert.css') }}">
 <div class="contenedor-supremo">
     <div class="container1">
         <ul>
@@ -10,7 +10,7 @@
                         <h2>{{ $oferta->nombre_vacante }}</h2>
                         <li class="oferta-item"><a>Salario: {{ $oferta->salario }}</a></li>
                         <li class="oferta-item"><a>Meses de experiencia: {{ $oferta->meses_experiencia }}</a></li>
-                        <li class="oferta-item"><a>Tipo de contrato: {{ $oferta->tipoContrato->nombre_contrato }}</a></li>
+                        <li class="oferta-item"><a>Tipo de contrato: {{ $oferta->tipo_contratos->nombre_contrato }}</a></li>
                         <li class="oferta-item"><a>Localidad: {{ $oferta->direccion }}</a></li>
                         
                         <section class="contenedor-derecha">
@@ -19,7 +19,7 @@
                             <li class="oferta-item"><a>Fecha publicación: {{ $oferta->fecha_inicio }}</a></li>
                             <li class="oferta-item"><a>Fecha cierre: {{ $oferta->fecha_fin }}</a></li>
                             <section class="boton">
-                                <a href="{{ route('postulacion') }}"><button class="botonUnico">Postularme</button></a>
+                            <a href="{{ route('postulacion') }}"><button class="botonUnico">Postularme</button></a>
                             </section>
                         </section>
                     </section>
