@@ -27,6 +27,7 @@ use App\Http\Controllers\TermsAndConditionsController;
 use App\Http\Controllers\TipoUsuarioController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\NotRegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,6 +53,9 @@ Route::get('/termsConditions', [TermsAndConditionsController::class, 'mostrarTer
 Route::get('/layouts', [BienvenidaController::class, 'redirect'])->name('layouts');
 
 Route::get('/postulation', [PostulationController::class, 'mostrar'])->name('postulation');
+
+Route::get('/notRegister', [NotRegisterController::class, 'mostrarNotRegister'])->name('notRegister');
+
 
 // Rutas Habilidad
 Route::get('/habilidad', [HabilidadController::class, 'Habilidad'])->name('habilidad');

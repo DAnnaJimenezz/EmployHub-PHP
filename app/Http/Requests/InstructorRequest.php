@@ -30,6 +30,7 @@ class InstructorRequest extends FormRequest
             'apellido_instructor' => ['required', 'string'],
             'correo_electronico' => ['required', 'string', 'max:50'],
             'contraseña' => ['required', 'string', 'max:40'],
+            'id_administrador' => ['required', 'exists:administradores,id']
         ];
     }
 }

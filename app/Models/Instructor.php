@@ -20,4 +20,9 @@ class Instructor extends Model
         'contraseña',
         'id_administrador',
     ];
+
+    public function administrador()
+    {
+        return $this->belongsTo(Administrator::class, 'id_administrador');
+    }
 }

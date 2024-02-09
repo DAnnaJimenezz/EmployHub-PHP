@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class NotRegisterController extends Controller
 {
-
-    public function redirect()
+    public function mostrarNotRegister()
     {
         return view('notRegister.index');
     }

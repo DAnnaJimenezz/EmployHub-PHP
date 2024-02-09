@@ -21,4 +21,10 @@ class Administrador extends Model
         'contraseña',
         'id_tipo_usuario',
     ];
+
+        
+    public function instructor()
+    {
+        return $this->hasMany(Instructor::class, 'id_administrador');
+    }
 }
