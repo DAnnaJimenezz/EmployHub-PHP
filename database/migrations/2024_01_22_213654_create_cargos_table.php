@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('cargos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_cargo', 300);
-            $table->string('direccion', 20);
-            $table->string('telefono', 12);
+            $table->string('descripccion', 500);
             $table->timestamps();
         });
     }

@@ -16,4 +16,9 @@ class Ocupacion extends Model
         'descripcion_ocupacion',
         'id_cargo'
     ];
+
+    public function cargo()
+    {
+        return $this->belongsTo(Cargo::class);
+    }
 }

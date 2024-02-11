@@ -13,7 +13,11 @@ class Cargo extends Model
 
     protected $fillable = [
         'nombre_cargo',
-        'direccion',
-        'telefono',
+        'descripccion',
     ];
+
+    public function ocupaciones()
+    {
+        return $this->hasMany(Ocupacion::class);
+    }
 }

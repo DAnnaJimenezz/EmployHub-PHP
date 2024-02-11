@@ -42,7 +42,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.app');
+    return view('notRegister.index');
 });
 
 
@@ -50,7 +50,7 @@ Route::get('/aboutUs', [AboutUSController::class, 'mostrarAbout'])->name('aboutU
 
 Route::get('/termsConditions', [TermsAndConditionsController::class, 'mostrarTermsConditions'])->name('termsConditions');
 
-Route::get('/layouts', [BienvenidaController::class, 'redirect'])->name('layouts');
+Route::get('/layouts', [HomeController::class, 'redirect'])->name('layouts');
 
 Route::get('/postulation', [PostulationController::class, 'mostrar'])->name('postulation');
 

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_ocupacion', 100);
             $table->string('descripcion_ocupacion', 500);
-            // $table->foreignId('id_cargo')->constrained('cargos')->onDelete('cascade');
+            $table->foreignId('id_cargo')->constrained('cargos')->onDelete('cascade');
             $table->timestamps();
         });
     }
